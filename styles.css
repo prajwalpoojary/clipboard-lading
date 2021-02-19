@@ -176,12 +176,8 @@ img {
 }
 
 /* Sponsers */
-.sponsers .flex {
-    justify-content: space-between;
-}
-
-.sponsers img {
-    width: 80%;
+.sponsers .grid {
+    grid-template-columns: repeat(5, 1fr);
 }
 
 /* Footer */
@@ -198,18 +194,23 @@ img {
     color: var(--strong-cyan);
 }
 
-.footer .flex {
+.footer .flex,
+.footer__social {
     justify-content: space-between;
 }
 
 .footer__logo {
-    width: 50px;
+    width: 40px;
+}
+
+.footer__links {
+    margin-left: 20px;
 }
 
 .footer__links li {
     display: inline-block;
     min-width: 100px;
-    width: 25%;
+    width: 30%;
 }
 
 .footer__social a {
@@ -218,4 +219,88 @@ img {
 
 .footer__social .icon:hover path {
     fill: var(--strong-cyan);
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+    .computer .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .computer__img {
+        position: static;
+        justify-self: center;
+    }
+
+    .computer__item {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .computer__item > div {
+        margin-bottom: 3rem;
+    }
+
+    .workflow .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsers .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .sponsers .grid > div {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__text,
+    .snippets__text,
+    .clipboard__text {
+        width: 460px;
+    }
+
+    .computer__img {
+        width: 80%;
+    }
+
+    .footer .flex {
+        flex-direction: column;
+    }
+
+    .footer__links {
+        margin: 30px 0;
+    }
+
+    .footer__links li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .footer .footer__social .flex {
+        display: flex;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 576px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .header__text,
+    .snippets__text,
+    .clipboard__text {
+        width: 100%;
+    }
+
+    .computer__img,
+    .clipboard img {
+        width: 100%;
+    }
 }
