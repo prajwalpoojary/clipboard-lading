@@ -295,8 +295,13 @@ img {
 
     .header__text,
     .snippets__text,
-    .clipboard__text {
+    .clipboard__text,
+    .computer__item {
         width: 100%;
+    }
+
+    .computer__item {
+        margin-left: 0;
     }
 
     .computer__img,
